@@ -19,7 +19,10 @@ $ docker build t my_user/redis:latest
 
 ````bash
 
-# docker run -d -p 6379:6379 -v {local_fs}:/var/lib/redis -v {local_fs}:/var/log/redis -t -h {node_host_name} -name {image_name} redis:latest
+# docker run -d -p 6379:6379 \
+             -v {local_fs}:/var/lib/redis \
+             -v {local_fs}:/var/log/redis \
+	     -t -h {node_host_name} -name {image_name} redis:latest
 ````
 
 where:
@@ -32,7 +35,11 @@ You can also start redis-server with command line options:
 
 ````bash
 
-# docker run -d -p 7777:7777 -v {local_fs}:/var/lib/redis -v {local_fs}:/var/log/redis -t -h {node_host_name} -name {image_name} redis:latest redis-server --port 7777
+# docker run -d -p 7777:7777 \
+             -v {local_fs}:/var/lib/redis \
+	     -v {local_fs}:/var/log/redis \
+	     -t -h {node_host_name} -name {image_name} \
+	     redis:latest redis-server --port 7777
 ````
 
 # Ports
