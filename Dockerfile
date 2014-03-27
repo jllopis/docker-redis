@@ -15,7 +15,7 @@ RUN apt-get -y update && \
     apt-get -y update && \
     apt-get -y upgrade --no-install-recommends
 
-RUN apt-get install -y redis-server=2:2.8.6-1chl1~precise1 --no-install-recommends
+RUN apt-get install -y redis-server=2:2.8.7-1chl1~precise1 --no-install-recommends
 
 RUN sysctl -w vm.overcommit_memory=1
 
